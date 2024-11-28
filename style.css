@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*header*/
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    font-weight: bold;
+}
+
+h1{
+    color: rgb(13, 5, 5);
+    font-size: 45px;
+}
+
+ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: antiquewhite;
+}
+
+/* Media Queries para el header */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    ul {
+        width: 100%;
+        text-align: center;
+        padding: 0; 
+    }
+
+    ul li {
+        display: block;
+        padding: 10px 0;
+        text-align: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        padding: 10px 5%;
+    }
+}
+
+
+/*body*/
+
+.encabezado-image{
+    background-image: url(../img\ Index/image1.png);
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.encabezado-image p{
+    font-size: 20px;
+}
+
+.encabezado-image h3{
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.container-luxe{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.card img{
+    width: 100%;
+    height: 210px;
+}
+
+.contenido{
+    padding: 15px;
+    text-align: center;
+}
+
+.contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: rosybrown;
+    border: 1px solid rosybrown;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.contenido a:hover{
+    background:rosybrown;
+    color: #fff;
+}
+
+/* diseño de accesorios, joyeria y relojes */
+
+.container-acc,
+.container-joyeria,
+.container-relojes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 15px; 
+}
+
+.acc,
+.joyeria,
+.reloj{
+    border-radius: 10px;
+    margin: 0 10px; 
+}
+
+.acc:hover,
+.joyeria:hover,
+.reloj:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.info-producto{
+    padding: 15px 30px;
+}
+
+.acc img,
+.joyeria img,
+.reloj img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.precio{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.container-acc button,
+.container-joyeria button,
+.container-relojes button{
+    border: none;
+    background: none;
+    background-color: black;
+    color: aliceblue;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+/*diseño formulario*/
+
+.form-register{
+    width: 90%;
+    max-width: 400px;
+    background: rgb(247, 223, 223);
+    padding: 20px 30px;
+    margin: 0 auto 70px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.form-register h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+    font-size: 18px;
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-register a{
+    color: rgb(143, 112, 112);
+    text-decoration: none;
+}
+
+.form-register a:hover{
+    color: rgb(138, 117, 117);
+    text-decoration: underline;
+}
+
+.form-register .botons{
+    width: 100%;
+    background: rosybrown;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+/*diseño de footer*/
+
+.container-footer{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer{
+    background-color: rgba(40, 38, 38, 0.694);
+    padding: 60px 0;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-links{
+    width: 100%;
+    max-width: 300px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: bisque;
+    margin-bottom: 10px;
+    font-weight: 200;
+    border-bottom: 2px solid rosybrown;
+    display: inline-block;
+}
+
+.footer-links ul li a{
+    color: #fff;
+    display: block;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: bisque;
+    padding-left: 6px;
+}
+
+.social-link a{
+    min-height: 50px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 60%;
+    color: bisque;
+    transition: all .5s ease;
+}
+
+/* Media Queries para el footer */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        max-width: none;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        padding-left: 0;
+    }
+
+    .footer-links ul li {
+        padding: 5px 0;
+    }
+
+    .social-link {
+        justify-content: center;
+    }
+
+    .social-link a {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-links h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links ul li a {
+        font-size: 14px;
+    }
+}
+
+
+
